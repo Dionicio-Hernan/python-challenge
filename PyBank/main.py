@@ -41,13 +41,13 @@ with open(csvpath) as csvfile:
 # Changes in Profit Loss over time, find average of changes
 previous_pl = current_pl
 next
-else:
+if:
     current_change_pl = current_pl - previous_pl
     total_change_pl += current_change_pl
     previous_pl = current_pl
 
 # Biggest increase in profits
-if current_change_pl > max_increase:
+else current_change_pl > max_increase:
     biggest_increase = current_change_pl
     biggest_decrease = row(0)
 
@@ -60,5 +60,13 @@ biggest_decrease_month = row (0)
 avg_change_pl = total_change_pl/total_months
 
 # Print outputs
-print ("Total months:" + total_months)
-print (net_pl) 
+print("Total months:" + total_months)
+print("Net Profit:" + net_prof)
+print("Total change in profit and loss:" + total_change_pl)
+print("Average change in profit and loss:" + average_change_pl)
+print("Biggest increase:" + biggest_decrease_month)
+print("Biggest increase in profit and loss:" + biggest_increase)
+print("Biggest decrease in month" + biggest_decrease_month)
+Print("Biggest decrease in profit and loss:" + biggest_decrease)
+
+
