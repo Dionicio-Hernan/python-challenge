@@ -4,24 +4,46 @@ import os
 # Module for reading files
 import csv
 
+# Establish variables
+total_months = 0
+current _pl = 0 
+previous_pl = 0
+net_pl = 0 
+total_change_pl = 0 
+current_change_pl = 0
+average_change_pl = 0 
+biggest_increase = 0
+biggest_decrease = 0 
+
 # Establish path to file 
-csvpath = os.path.join("..", "Resources", "budget_data.csv")
+csvpath = os.path.join("Resources", "budget_data.csv")
 
 # Open the CSV
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
+    next(csvreader)
+
+    print(csv_reader)
     
+# Read header row first
+    csv_header = next(csvreader)
+    print(f"CSV Header: {csv_header}")
+
+# Read each row of data after the header
     for row in csvreader:
-        months = row[0]
-        profit_loss = row[1]
+        print(row[0])
 
-# Extract total number of months in dataset
-    for row in csvreader:
-            months.append(row[0])
+# Get total number of months from this file
+total_months = row(0)
 
-# Add profit and loss values
-profit_loss.append(int(row[1]))
+# Calculate net total amount in profit/loss
+highs = []
+high = int(row [1])
+highs.append(high)
 
-# Variables
-total_number_months = len(months)
-profit_loss_net_total = sum((profit_loss))
+# Changes in Profit Loss over time, find average of changes
+
+# Print outputs
+print (total_months)
+print (net_profit_loss) 
+print (highs)
